@@ -10,47 +10,32 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
 
-<!-- Jasny Bootstrap -->
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/css/jasny-bootstrap.min.css">
 <script src="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/js/jasny-bootstrap.min.js"></script>
 
-<!-- Scrolling Script-->
 <script>
 $(document).ready(function(){
-  // Add smooth scrolling to all links in navbar + footer link
   $(".navbar a, footer a[href='#top'], .container-fluid a[href='#third']").on('click', function(event) {
 
-  // Make sure this.hash has a value before overriding default behavior
   if (this.hash !== "") {
-
-    // Prevent default anchor click behavior
     event.preventDefault();
-
-    // Store hash
     var hash = this.hash;
-
-    // Using jQuery's animate() method to add smooth page scroll
-    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
     $('html, body').animate({
       scrollTop: $(hash).offset().top
     }, 900, function(){
-
-      // Add hash (#) to URL when done scrolling (default click behavior)
       window.location.hash = hash;
       });
-    } // End if 
+    } 
   });
 })
 </script>
 
-<!--Loading Script-->
-<script type="text/javascript">// <![CDATA[
+<script type="text/javascript">
         function loading(){
             $("#loading").show();
         }
-// ]]></script>
+</script>
 
-<!--Tooltip Script-->
 <script>
 $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip(); 
@@ -80,7 +65,7 @@ li:hover {
   border-bottom: 5px solid rgb(255, 255, 255);
 }
 .bg-1 { 
-  background-color: #18121E; /* Prussian Blue 0B3C5D, Sky Blue328CC1, Ivory Black1D2731 Gold Leaf D9b310 */
+  background-color: #18121E; 
   color: #ffffff;
 }
 .bg-2 { 
@@ -88,7 +73,7 @@ li:hover {
   color: #ffffff;
 }
 .bg-3 { 
-  background-color: #328CC1; /* Rusty Red #984B43 */
+  background-color: #328CC1; 
   color: #ffffff;
 
 }
@@ -97,7 +82,6 @@ li:hover {
   color: #ffffff;
 
 }
-/* Add a dark background color with a little bit see-through */ 
 .navbar {
     margin-bottom: 0;
     background-color: #f6994b;
@@ -107,23 +91,19 @@ li:hover {
     opacity:0.9;
 }
 
-/* Add a gray color to all navbar links */
 .navbar li a, .navbar .navbar-brand { 
     color: #ffffff !important;
 }
 
-/* On hover, the links will turn white */
 .navbar-nav li a:hover {
     color: #fff !important;
 }
 
-/* The active link */
 .navbar-nav li.active a {
     color: #fff !important;
     background-color:#29292c !important;
 }
 
-/* Remove border color from the collapsible button */
 .navbar-default .navbar-toggle {
     border-color: transparent;
 }
@@ -159,7 +139,7 @@ img {
     background-color: rgb(255, 106, 0);
     color: #FFFFFF;
 }
-/* Add a dark background color to the footer */
+
 footer {
     background-color: #ffa322;
     color: #f5f5f5;
@@ -216,7 +196,6 @@ label {
 </style>
 </head>
 
-<!--Navigation Bar-->
 <body id="top">
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
@@ -236,7 +215,6 @@ label {
   </div>
 </nav>
 
-<!-- First Container (Splash)-->
 <div class="container-fluid bg-0 text-center" id="first">
 <h1>Let's help you get back on the road with!</h1><br><br>
   <a href="#third" class="btn btn-default btn-lg">
@@ -244,7 +222,6 @@ label {
   </a>
 </div>
 
-<!-- Second Container (How this works)-->
 <div class="container-fluid bg-4 text-center" id ="second">
   <h2>WORKING PROCESS</h2>
   <br>
@@ -273,7 +250,6 @@ label {
     <br><br>
 </div>
 
-<!-- Third and Fourth Container (Results)-->
 {% block content %}{% endblock %}
 
 </body>
