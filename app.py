@@ -61,7 +61,11 @@ def upload_and_classify():
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 
             filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
-            model_results = engine.engine(filepath)
+            make = request.form.get('make')
+            car_model = request.form.get('model')
+            year = int(request.form.get('year'))
+
+            model_results = engine.engine(filepath, make, car_model, year)
 
             return render_template('results.html', result=model_results, scroll='third', filename=filename)
 

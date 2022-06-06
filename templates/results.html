@@ -22,6 +22,8 @@
         <td>{{ result['location'] }}</td></tr>
         <tr><td>Severity</td>
         <td>{{ result['severity'] }}</td></tr>
+        <tr><td>Cost estimated:</td>
+        <td>{{ result['cost'] }}</td></tr>
         </table>
         {% else %}
         <td><span class="glyphicon glyphicon-remove"></span></td></tr></table>
@@ -38,7 +40,7 @@
     <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="menu1">Next Steps
     <span class="caret"></span></button>
     <ul class="dropdown-menu" role="menu" aria-labelledby="menu1" style="line-height: 20px;vertical-align:middle;" >
-    <li><a href="{{ url_for('available', a='Cost estimates') }}">Obtain cost estimate</a></li>
+    <!--<li><a href="{{ url_for('available', a='Cost estimates') }}">Obtain cost estimate</a></li>-->
     <li><a href="{{ url_for('available', a='Documentation') }}">Print documentation</a></li>
     <li><a href="{{ url_for('assess') }}">Request another damage assessment</a></li>
   </ul></div>

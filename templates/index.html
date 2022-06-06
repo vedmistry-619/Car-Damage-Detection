@@ -21,12 +21,28 @@
   <div class="fileinput-preview thumbnail" data-trigger="fileinput" id="window"></div>
   <div>
     <form action="assessment" method="POST" enctype="multipart/form-data" class ="form-inline">
+    <label for="make">Choose car's make:</label>
+    <select name="make" id="make" style="color: black;">
+      <option value="BMW">BMW</option>
+      <option value="Ford">Ford</option>
+    </select>
+    <br>
+    <br>
+    <label for="model">Enter car's model</label>
+    <input type="text" name="model" id="model" style="color: black;">
+    <br>
+    <br>
+    <label for="model">Enter car's year</label>
+    <input type="text" name="year" id="year" style="color: black;">
+    <br>
+    <br>
     <span class="btn btn-default btn-file">
-    <span class="fileinput-new">Select Image</span>
-    <span class="fileinput-exists">Change</span>
-    <input type="file" id="filename" name="file"></span>
-    <button type="submit" class="btn btn-default fileinput-exists" id="analyze" onclick="loading();">Submit</button></form></div>
-
+      <span class="fileinput-new">Select Image</span>
+      <span class="fileinput-exists">Change</span>
+      <input type="file" id="filename" name="file"></span>
+      <button type="submit" class="btn btn-default fileinput-exists" id="analyze" onclick="loading();">Submit</button>
+      <br>
+  </form></div>
   </div>
   <div id="loading"></div>
       <h4>Image tips:</h4>
