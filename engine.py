@@ -298,7 +298,7 @@ def engine(img_path, make, car_model, year):
     dictionary_to_test = {'MAKE': [make], 'YEAR': [year], 'MODEL': [
         car_model], 'no_of_damages': [2], 'score': [(damage_score_x+damage_score_y)/2]}
     print(dictionary_to_test)
-    cost = predict_cost(dictionary_to_test)
+    cost = predict_cost(dictionary_to_test)/2
     
     print(cost)
 
